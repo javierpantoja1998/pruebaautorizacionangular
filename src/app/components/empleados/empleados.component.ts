@@ -15,12 +15,12 @@ export class EmpleadosComponent implements OnInit,DoCheck {
   constructor(private _service: EmpleadosService) { }
 
   ngOnInit(): void {
-    
+
   }
 
   //Funcion que se realiza al cargar la pagina, y ademas, al actualizar algun dato
   ngDoCheck(): void {
-    
+
     console.log(environment.userName)
 
     if (environment.token == null){
@@ -34,7 +34,7 @@ export class EmpleadosComponent implements OnInit,DoCheck {
           this.empleados = res;
           console.log("Dentro Check")
           console.log(this.empleados)
-    
+
         })
 
     });
