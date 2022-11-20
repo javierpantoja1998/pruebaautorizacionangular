@@ -15,7 +15,13 @@ export class EmpleadosComponent implements OnInit,DoCheck {
   constructor(private _service: EmpleadosService) { }
 
   ngOnInit(): void {
+    this._service.getEmpleados().subscribe(res => {
 
+      this.empleados = res;
+      console.log("Dentro Init")
+      console.log(this.empleados)
+
+    })
   }
 
   //Funcion que se realiza al cargar la pagina, y ademas, al actualizar algun dato
